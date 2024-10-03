@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Tabbedapp.Services;
 using Tabbedapp.Views;
+using Tabbedapp.SimpleNav;
 
 namespace Tabbedapp
 {
@@ -14,7 +15,8 @@ namespace Tabbedapp
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            //MainPage = new AppShell();
+            MainPage = new NavigationPage(new Page1());
         }
 
         protected override void OnStart ()
